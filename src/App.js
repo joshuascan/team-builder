@@ -33,20 +33,26 @@ function App() {
   return (
     <div className="App">
         <h1>Team Member Tracker</h1>
-        <h2>Add Team Member:</h2>
-        <Form
-        update={updateForm}
-        submit={submitForm}
-        values={formValues}
-        />
-        <h2>Team Members:</h2>
-        {/* {
-            teamMembers.map(member, idx => {
-                return (
-                    <TeamMember key={idx} details={member} />
-                )
-            })
-        } */}
+        <div className='add-member container'>
+            <h2>Add Team Member:</h2>
+            <Form
+            update={updateForm}
+            submit={submitForm}
+            values={formValues}
+            />
+        </div>
+        <div className='members container'>
+            <h2>Team Members:</h2>
+            <div className='member'>
+            {
+                teamMembers.map(member => {
+                    return (
+                        <TeamMember key={member.id} details={member} />
+                        )
+                    })
+                }
+            </div>
+        </div>
     </div>
   );
 }
