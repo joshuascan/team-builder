@@ -34,11 +34,11 @@ function App() {
     <div className="App">
         <h1>Team Member Tracker</h1>
         <h2>Add Team Member:</h2>
-        {/* <Form
+        <Form
         update={updateForm}
         submit={submitForm}
         values={formValues}
-        /> */}
+        />
         <h2>Team Members:</h2>
         {/* {
             teamMembers.map(member, idx => {
